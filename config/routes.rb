@@ -1,25 +1,11 @@
 Rails.application.routes.draw do
-  get 'artists/index'
-  get 'artists/show'
-  get 'artists/new'
-  get 'artists/edit'
-  get 'songs/index'
-  get 'songs/show'
-  get 'songs/new'
-  get 'songs/edit'
-  get 'billboards/index'
-  get 'billboards/show'
-  get 'billboards/new'
-  get 'billboards/edit'
-  get 'billboards/artists'
-  get 'billboards/index'
-  get 'billboards/show'
-  get 'billboards/new'
-  get 'billboards/edit'
-  get 'billboards/songs'
-  get 'billboards/index'
-  get 'billboards/show'
-  get 'billboards/new'
-  get 'billboards/edit'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root "billboards#index"
+
+ resources :billboard do 
+  resources :artist
+ end
+ resources :artist do
+  resources :song
+end
+
 end
