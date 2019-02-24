@@ -1,4 +1,6 @@
 class BillboardsController < ApplicationController
+  before_action :set_billboard, only: [:show, :update, :edit, :destroy]
+
   def index
     @billboards = Billboard.all
   end
@@ -8,6 +10,7 @@ class BillboardsController < ApplicationController
 
   def new
     @billboard = Billboard.new
+    render partial: "form"
   end
 
   def create
@@ -21,6 +24,7 @@ class BillboardsController < ApplicationController
 
 
   def edit
+    render partial: "form"
   end
 
   def update

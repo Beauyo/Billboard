@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
   root "billboards#index"
 
- resources :billboard do 
-  resources :artist
+ resources :billboards do 
+  resources :songs
  end
- resources :artist do
-  resources :song
+ resources :artists do
+  resources :songs
 end
 
 end

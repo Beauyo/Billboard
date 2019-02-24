@@ -1,2 +1,22 @@
 <h1 class="ui header">Billboard top 100 artist</h1>
-<%= link_to "Artist", artist_index_path %>
+<table class="ui striped table">
+  <thead>
+     <tr class="center aligned">
+     <th colspan="4"></th>
+     </tr>
+     </thead>
+
+<tbody>     
+  <% @billboards.each do |billboard| %>
+    <tr class="center aligned">
+   <h1><%= billboard.title %></h1>
+     <td><%= link_to "Show", billboard_path(billboard) %></td>
+      <td><%= link_to "Edit", edit_billboard_path(billboard) %></td>
+      <td><%= link_to "Destroy", billboard_path(billboard), method: :delete %></td>
+     </tr>
+   <% end %>
+   </tbody>
+   </table>
+
+   <br />
+   <%= link_to "New billboard", new_billboard_path %>

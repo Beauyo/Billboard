@@ -1,7 +1,8 @@
 <h1>Top 100 Artist</h1>
 <%= link_to "Add a new artist", new_artist_path %>
 <ul>
-  <% artists.each do |artist| %>
-  <li><%= link_to artist.name, artist_path %></li>
+  <% @artists.each do |artist| %>
+  <li><%= link_to artist.name, artists_path %></li>
   <% end %>
   </ul>
+
