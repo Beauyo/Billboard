@@ -29,13 +29,13 @@ class ArtistsController < ApplicationController
 
   def update
     if @artist.update(artist_params)
-      redirect_to [@billboard, artist]
+      redirect_to artists_path
     else
       render :edit
     end
   end
 
-  def destroy 
+  def destroy
     @artist.destroy
     redirect_to artists_path
   end 

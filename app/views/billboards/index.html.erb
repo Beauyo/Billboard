@@ -14,8 +14,8 @@
 
    <h1><%= billboard.title %></h1>
      <td><%= link_to "Artist", artists_path %></td>
-     <td><%= link_to "Edit", edit_billboard_path(billboard) %></td>
-       <td><%= link_to "Destroy", billboard_path(billboard), method: :delete %></td>
+     <td><%= link_to "Edit Billboard", edit_billboard_path(billboard) %></td>
+       <td><%= link_to "Delete Billboard", billboard_path(billboard), method: :delete %></td>
       </td>
      </tr>
    <% end %>
