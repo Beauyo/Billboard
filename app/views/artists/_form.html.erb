@@ -2,9 +2,7 @@
 <%= form_for @artist do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name, required: true, autofocus: true %>
-  <%= f.label :songs %>
-  <%= f.text_field :songs %>
-  <%= f.label :avavter %>
+  <%= f.label :avatar %>
   <%= f.text_field :avatar %>
   <%= f.submit %>
   <% end %>

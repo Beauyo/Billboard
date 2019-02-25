@@ -1,4 +1,6 @@
 <h1 class="ui header">Billboard top 100 artist</h1>
+   <%= link_to "New billboard", new_billboard_path %>
+   <div class="ui divider"></div>
 <table class="ui striped table">
   <thead>
      <tr class="center aligned">
@@ -8,15 +10,16 @@
 
 <tbody>     
   <% @billboards.each do |billboard| %>
-    <tr class="center aligned">
+    <tr class="center aligned" >
+
    <h1><%= billboard.title %></h1>
-     <td><%= link_to "Show", billboard_path(billboard) %></td>
-      <td><%= link_to "Edit", edit_billboard_path(billboard) %></td>
-      <td><%= link_to "Destroy", billboard_path(billboard), method: :delete %></td>
+     <td><%= link_to "Artist", artists_path %></td>
+     <td><%= link_to "Edit", edit_billboard_path(billboard) %></td>
+       <td><%= link_to "Destroy", billboard_path(billboard), method: :delete %></td>
+      </td>
      </tr>
    <% end %>
    </tbody>
    </table>
 
    <br />
-   <%= link_to "New billboard", new_billboard_path %>
