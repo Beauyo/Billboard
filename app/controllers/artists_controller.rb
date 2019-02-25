@@ -1,6 +1,6 @@
 class ArtistsController < ApplicationController
   # before_action :set_billboard, only: [:create]
-  before_action :set_artist, only: [:show, :edit, :update, :destory]
+  before_action :set_artist, only: [:show, :edit, :update, :destroy]
   def index
     @artists = Artist.all
   end
