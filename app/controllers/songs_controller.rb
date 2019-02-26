@@ -38,4 +38,5 @@ class SongsController < ApplicationController
 
   def song_params
     params.require(:billboard).permit(:artist)
+  end
 end
